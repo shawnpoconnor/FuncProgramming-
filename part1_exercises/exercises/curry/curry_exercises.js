@@ -6,7 +6,7 @@ var _ = require('ramda');
 //==============
 // Refactor to remove all arguments by partially applying the function
 
-var words = _.split(' ');
+var words = _.split(' ')
 
 // Exercise 1a
 //==============
@@ -19,9 +19,7 @@ var sentences = _.map(words);
 //==============
 // Refactor to remove all arguments by partially applying the functions
 
-var filterQs = function(xs) {
-  return filter(function(x){ return match(/q/i, x);  }, xs);
-};
+var filterQs = _.filter(match(/q/i));
 
 
 // Exercise 3
