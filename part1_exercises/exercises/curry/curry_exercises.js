@@ -37,16 +37,14 @@ var max = _.reduce(_keepHighest, -Infinity);
 // ============
 // wrap array's slice to be functional and curried.
 // //[1,2,3].slice(0, 2)
-var slice = _.curry(function(startSlice, endSlice, arr) {
-    return arr.slice(startSlice, endSlice);
-});
+var slice = _.curry(function(startSlice, endSlice, arr) { return arr.slice(startSlice, endSlice); });
 
 
 // Bonus 2:
 // ============
 // Use slice to define a function "take" that returns n elements from the beginning of an array. Make it curried.
 // For ['a', 'b', 'c'] with n=2 it should return ['a', 'b']
-var take = undefined;
+var take = slice(0);
 
 
 module.exports = { words: words,
